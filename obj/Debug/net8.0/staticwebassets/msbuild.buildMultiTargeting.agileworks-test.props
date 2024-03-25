@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\agileworks-test.props" />
+</Project>

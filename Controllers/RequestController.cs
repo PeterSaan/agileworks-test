@@ -19,9 +19,10 @@ public class RequestController : Controller
     }
 
     [HttpPost]
-    public IActionResult Create(Request request, int id = 1)
+    public IActionResult Create(Request request)
     {
         // TODO: Implement the logic to check for last id and, if needed, increment it. ID should be unique and autoincremented.
+        int id = requests.Count + 1;
         request.Id = id;
         request.Created_at = DateTime.Now;
         request.Solved = false;
@@ -29,7 +30,7 @@ public class RequestController : Controller
         return RedirectToAction("Index");
     }
 
-    public IActionResult Solve(int id)
+    public IActionResult Solved(int id)
     {
         requests.RemoveAt(requests.FindIndex(r => r.Id == id));
         return RedirectToAction("Index");

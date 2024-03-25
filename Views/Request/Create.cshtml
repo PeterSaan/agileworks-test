@@ -1,0 +1,18 @@
+@model agileworks_test.Models.Request;
+
+<head>
+    <title>Loo pöördumine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="text-center">
+    <p class="text-3xl">Loo pöördumine</p>
+
+    <form method="post" action="/Request/Create">
+        <label for="description">Kirjeldus:</label>
+        <input type="text" id="description" name="Description" required>
+        <br>
+
+        <button type="submit">Esita pöördumine</button>
+    </form>
+</body>

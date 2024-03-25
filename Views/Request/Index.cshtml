@@ -1,0 +1,31 @@
+﻿<head>
+    <title>Kõik pöörumised</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="text-center">
+    <p class="text-3xl">Sinu pöördumised</p>
+
+    <table class="grid justify-center mt-8">
+        <tr class="">
+            <th class="px-8">ID</th>
+            <th class="px-8">Selgitus</th>
+            <th class="px-8">Millal tehtud</th>
+            <th class="px-8">Lahendatud?</th>
+        </tr>
+        @foreach (var request in Model)
+        {
+            <tr>
+                <td class="px-8">@request.Id</td>
+                <td class="px-8">@request.Description</td>
+                <td class="px-8">@request.Created_at</td>
+                <td class="px-8">@request.Solved</td>
+                @if(request.Solved==true){
+                        <td class="px-8">@request.Solved_when</td>
+                    }
+            </tr>
+        }
+    </table>
+
+    <a href="/Request/Create">Loo pöördumine</a>
+</body>
