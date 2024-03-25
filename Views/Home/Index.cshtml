@@ -1,8 +1,23 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Requests overview";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h1>Sinu pöördumised</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Selgitus</th>
+        <th>Millal tehtud</th>
+        <th>Lahendatud?</th>
+    </tr>
+    @foreach (var request in Model)
+    {
+        <tr>
+            <td>@request.Id</td>
+            <td>@request.Description</td>
+            <td>@request.Created_at</td>
+            <td>@request.Solved</td>
+        </tr>
+    }
+</table>
