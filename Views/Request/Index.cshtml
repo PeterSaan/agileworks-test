@@ -12,6 +12,10 @@
             <th class="px-8">Selgitus</th>
             <th class="px-8">Millal tehtud</th>
             <th class="px-8">Lahendatud?</th>
+            @if()
+            {
+                <th class="px-8">Millal Lahendati?</th>
+            }
         </tr>
         @foreach (var request in Model)
         {
@@ -20,9 +24,10 @@
                 <td class="px-8">@request.Description</td>
                 <td class="px-8">@request.Created_at</td>
                 <td class="px-8">@request.Solved</td>
-                @if(request.Solved==true){
-                        <td class="px-8">@request.Solved_when</td>
-                    }
+                @if(request.Solved==true)
+                {
+                    <td class="px-8">@request.Solved_when</td>
+                }
             </tr>
         }
     </table>

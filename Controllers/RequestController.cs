@@ -25,7 +25,7 @@ public class RequestController : Controller
         int id = requests.Count + 1;
         request.Id = id;
         request.Created_at = DateTime.Now;
-        request.Solved = false;
+        request.Solved = true;
         requests.Add(request);
         return RedirectToAction("Index");
     }
