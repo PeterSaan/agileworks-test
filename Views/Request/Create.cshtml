@@ -6,13 +6,16 @@
 </head>
 
 <body class="text-center">
-    <p class="text-3xl">Loo pöördumine</p>
+    <p class="text-3xl my-3">Loo pöördumine</p>
 
-    <form method="post" action="/Request/Create">
-        <label for="description">Kirjeldus:</label>
-        <input type="text" id="description" name="Description" required>
+    <form method="post" action="/Request/Create" class="mt-10">
+        <label for="Description">Kirjeldus:</label>
+        <input type="text" id="Description" name="Description" class="border border-black rounded" required>
         <br>
+        <label for="SolvedBy">Lahendamise soovitud kuupäev:</label>
+        <input type="datetime-local" id="SolvedBy" name="SolvedBy" class="border border-black rounded" required>
+        <br><br>
 
-        <button type="submit">Esita pöördumine</button>
+        <button type="submit" class="align-middle bg-sky-400 hover:bg-sky-500 border-0 rounded p-1">Esita pöördumine</button>
     </form>
 </body>

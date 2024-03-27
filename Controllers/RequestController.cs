@@ -21,11 +21,14 @@ public class RequestController : Controller
     [HttpPost]
     public IActionResult Create(Request request)
     {
-        // TODO: Implement the logic to check for last id and, if needed, increment it. ID should be unique and autoincremented.
         int id = requests.Count + 1;
         request.Id = id;
-        request.Created_at = DateTime.Now;
-        request.Solved = true;
+        request.CreatedAt = DateTime.Now;
+        request.Solved = false;
+        if(request.Solved)
+        {
+            request.SolvedWhen = DateTime.Now;
+        }
         requests.Add(request);
         return RedirectToAction("Index");
     }

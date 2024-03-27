@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("agileworks-test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7fc9d5acdc1a13922db0300c884ce5244e47647d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+66d2f0a4fc56f0b8f073a5a711d155b9cf485929")]
 [assembly: System.Reflection.AssemblyProductAttribute("agileworks-test")]
 [assembly: System.Reflection.AssemblyTitleAttribute("agileworks-test")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
