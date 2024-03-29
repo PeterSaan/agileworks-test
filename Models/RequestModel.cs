@@ -6,6 +6,6 @@ public class Request
     public string Description { get; set; }
     public DateTime CreatedAt { get; set; }
     public bool Solved { get; set; }
-    public DateTime SolvedBy { get; set; }
+    public DateTime ToBeSolvedBy { get; set; }
     public DateTime SolvedWhen { get; set; }
 }

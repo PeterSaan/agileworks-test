@@ -22,20 +22,27 @@ public class RequestController : Controller
     public IActionResult Create(Request request)
     {
         int id = requests.Count + 1;
+
         request.Id = id;
         request.CreatedAt = DateTime.Now;
         request.Solved = false;
-        if(request.Solved)
-        {
-            request.SolvedWhen = DateTime.Now;
-        }
         requests.Add(request);
         return RedirectToAction("Index");
     }
 
-    public IActionResult Solved(int id)
+    [HttpPatch]
+    public IActionResult ChangeStatus(Request request)
     {
-        requests.RemoveAt(requests.FindIndex(r => r.Id == id));
-        return RedirectToAction("Index");
+        if (ModelState.IsValid)
+        {
+            var originalRequest = requests.Find(r => r.Id == request.Id);
+            bool changed = originalRequest.Solved != request.Solved;
+            if (changed)
+            {
+                originalRequest.Solved = request.Solved;
+                originalRequest.SolvedWhen = DateTime.Now;
+            }
+        }
+        return View("Index");
     }
 }
