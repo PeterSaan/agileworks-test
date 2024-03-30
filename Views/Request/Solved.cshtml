@@ -1,0 +1,18 @@
+@model agileworks_test.Models.Request;
+
+<head>
+    <title>Lahendamise kinnitus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="text-center">
+    <p class="text-3xl">Kas märkida pöördumine lahendatuks?</p>
+    <p>@Model.Description</p>
+
+    <form method="post" action="/Request/Solved/@Model.Id">
+        <button class="align-middle bg-sky-400 hover:bg-sky-500 border-0 rounded p-1 mx-3 mt-12" type="submit">Kinnita</button>
+    </form>
+    <br>
+
+    <a href="/Request" class="align-middle bg-sky-400 hover:bg-sky-500 border-0 rounded p-1 mx-3 mt-12">Ära kinnita</a>
+</body>
