@@ -30,19 +30,15 @@ public class RequestController : Controller
         return RedirectToAction("Index");
     }
 
-    [HttpPatch]
-    public IActionResult ChangeStatus(Request request)
+    [HttpPost]
+    public IActionResult Solved(int id)
     {
-        if (ModelState.IsValid)
-        {
-            var originalRequest = requests.Find(r => r.Id == request.Id);
-            bool changed = originalRequest.Solved != request.Solved;
-            if (changed)
-            {
-                originalRequest.Solved = request.Solved;
-                originalRequest.SolvedWhen = DateTime.Now;
-            }
-        }
-        return View("Index");
+        requests.RemoveAt(requests.FindIndex(r => r.Id == id));
+        return RedirectToAction("Index");
+    }
+
+    public IActionResult Solved(Request request)
+    {
+        return View(request);
     }
 }

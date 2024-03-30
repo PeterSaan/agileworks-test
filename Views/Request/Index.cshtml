@@ -6,7 +6,7 @@
     <script src="https://kit.fontawesome.com/a5575e939c.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="lg:container text-center">
+<body class="text-center">
 
     <p class="text-3xl my-3">Pooleliolevad pöördumised</p>
 
@@ -15,54 +15,23 @@
             <th class="px-8">Selgitus</th>
             <th class="px-8">Millal saadetud</th>
             <th class="px-8">Lahendatud?</th>
-            <th class="px-8">Millal lahendati</th>
             <th class="px-8">Deadline</th>
         </tr>
         @foreach (var request in Model)
         {
-            @if (!request.Solved)
-            {
-                // TODO: Find a way to change the solved state with a button
-                <tr class="mb-8">
-                    <td class="px-8">@request.Description</td>
-                    <td class="px-8">@request.CreatedAt</td>
-                    <td class="flex space-x-8 px-8">
-                        <div>@request.Solved</div>
-                        <button class="border border-black rounded p-1">
-                            <i class="fa-solid fa-check"></i>
-                        </button>
-                    </td>
-                    <td class="px-8">Pole veel lahendatud</td>
-                    <td class="px-8">@request.ToBeSolvedBy</td>
-                </tr>
-            }
+            <tr class="mb-8">
+                <td class="px-8">@request.Description</td>
+                <td class="px-8">@request.CreatedAt</td>
+                <td class="flex space-x-8 px-8">
+                    <div>@request.Solved</div>
+                    <a href="/Request/Solved/@request.Id" class="border border-black rounded p-1">
+                        <i class="fa-solid fa-check"></i>
+                    </a>
+                </td>
+                <td class="px-8">@request.ToBeSolvedBy</td>
+            </tr>
         }
     </table>
 
-    <p class="text-3xl my-12">Lahendatud pöördumised</p>
-
-    <table class="grid justify-center my-12">
-        <tr>
-            <th class="px-8">Selgitus</th>
-            <th class="px-8">Millal saadetud</th>
-            <th class="px-8">Lahendatud?</th>
-            <th class="px-8">Millal lahendati</th>
-            <th class="px-8">Deadline</th>
-        </tr>
-        @foreach (var request in Model)
-        {
-            @if (request.Solved)
-            {
-                <tr class="mb-8">
-                    <td class="px-8">@request.Description</td>
-                    <td class="px-8">@request.CreatedAt</td>
-                    <td class="px-8">@request.Solved</td>
-                    <td class="px-8">@request.SolvedAt</td>
-                    <td class="px-8">@request.ToBeSolvedBy</td>
-                </tr>
-            }
-        }
-    </table>
-
-    <a href="/Request/Create" class="align-middle bg-sky-400 hover:bg-sky-500 border-0 rounded p-1 mt-12">Loo pöördumine</a>    
+    <a href="/Request/Create" class="align-middle bg-sky-400 hover:bg-sky-500 border-0 rounded p-1 mx-3 mt-12">Loo pöördumine</a>
 </body>
