@@ -9,23 +9,23 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = agileworks_test
 build_property.RootNamespace = agileworks_test
-build_property.ProjectDir = C:\Users\GreenDice\Desktop\Kool\Proge\agileworks-test\
+build_property.ProjectDir = C:\Users\Peter\Desktop\proge\agileworks-test\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\GreenDice\Desktop\Kool\Proge\agileworks-test
+build_property.MSBuildProjectDirectory = C:\Users\Peter\Desktop\proge\agileworks-test
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/GreenDice/Desktop/Kool/Proge/agileworks-test/Views/Request/Create.cshtml]
+[C:/Users/Peter/Desktop/proge/agileworks-test/Views/Request/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWVzdFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/GreenDice/Desktop/Kool/Proge/agileworks-test/Views/Request/Index.cshtml]
+[C:/Users/Peter/Desktop/proge/agileworks-test/Views/Request/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWVzdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/GreenDice/Desktop/Kool/Proge/agileworks-test/Views/Request/Solved.cshtml]
+[C:/Users/Peter/Desktop/proge/agileworks-test/Views/Request/Solved.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWVzdFxTb2x2ZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

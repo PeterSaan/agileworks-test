@@ -1,4 +1,19 @@
 ﻿@using agileworks_test.Models;
+@functions {
+    string deadlineColorChange(DateTime deadline)
+    {
+        var now = DateTime.Now;
+        var timeDifference = deadline - now;
+        if (timeDifference.TotalHours <= 1)
+        {
+            return "text-red-500";
+        }
+        else
+        {
+            return "";
+        }
+    }
+}
 
 <head>
     <title>Kõik pöörumised</title>
@@ -19,7 +34,7 @@
         </tr>
         @foreach (var request in Model)
         {
-            <tr class="mb-8">
+            <tr class="mb-8 @deadlineColorChange(request.ToBeSolvedBy)">
                 <td class="px-8">@request.Description</td>
                 <td class="px-8">@request.CreatedAt</td>
                 <td class="flex space-x-8 px-8">

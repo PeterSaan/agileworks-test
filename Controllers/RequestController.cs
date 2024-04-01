@@ -10,7 +10,7 @@ public class RequestController : Controller
 
     public IActionResult Index()
     {
-        return View(requests);
+        return View(requests.OrderBy(r => r.ToBeSolvedBy));
     }
 
     public IActionResult Create()
